@@ -20,6 +20,49 @@
    
 
 }
+.grid__boton--presionado{
+   
+   border-radius: 1rem;
+   cursor: pointer;
+   border: 3px solid green;
+   width: 8rem;
+   height: 8rem;
+   
+   
+
+}
+.grid__boton--numero-1 {
+  color: blue;
+}
+
+.grid__boton--numero-2 {
+  color: green;
+}
+
+.grid__boton--numero-3 {
+  color: red;
+}
+
+.grid__boton--numero-4 {
+  color: darkblue;
+}
+
+.grid__boton--numero-5 {
+  color: darkred;
+}
+
+.grid__boton--numero-6 {
+  color: teal;
+}
+
+.grid__boton--numero-7 {
+  color: black;
+}
+
+.grid__boton--numero-8 {
+  color: gray;
+}
+
 .grid__boton:hover{
     background-color: antiquewhite;
 }

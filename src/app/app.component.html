@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>BUSCAMINAS</h1>
+  <h1>{{title}}</h1>
 </div>
 <div class="container">
   <button (click)="reiniciarJuego()" class="boton-reiniciar"> Reiniciar</button>
@@ -8,10 +8,30 @@
 <div class="grid">
   @for (item of items; track $index;let idx = $index) {
     @for (item of items; track $index;let idx1 = $index) {
-      <button (click)="clickbutton(idx,idx1)" [disabled]="buttonsDisabled[idx][idx1]" class="grid__boton">{{ buttonsDisabled[idx][idx1] ? matrizConMinas[idx][idx1] ? '💣' : matrizContador[idx][idx1] : '' }}
+      <button (click)="clickbutton(idx,idx1)" [disabled]="buttonsDisabled[idx][idx1]" class="grid__boton" [ngClass]="{'grid__boton--numero-1': matrizContador[idx][idx1] === 1 ,
+      'grid__boton--numero-2': matrizContador[idx][idx1] === 2,
+      'grid__boton--numero-3': matrizContador[idx][idx1] === 3,
+      'grid__boton--numero-4': matrizContador[idx][idx1] === 4,
+      'grid__boton--numero-5': matrizContador[idx][idx1] === 5,
+      'grid__boton--numero-6': matrizContador[idx][idx1] === 6,
+      'grid__boton--numero-7': matrizContador[idx][idx1] === 7,
+      'grid__boton--numero-8': matrizContador[idx][idx1] === 8}">
+      
+        @if (buttonsDisabled[idx][idx1]) {
+          @if (matrizConMinas[idx][idx1]) 
+          {
+            💣
+          } 
+          @else if (matrizContador[idx][idx1] > 0) 
+          {
+            {{ matrizContador[idx][idx1] }}
+          }
+          
+        }
       </button>
     }
   }
-  
-  
+</div>
+<div class="container">
+  <h1>{{estadoJuego}}</h1>
 </div>
