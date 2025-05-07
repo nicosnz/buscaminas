@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    gap: 0.2rem;
+    max-width: fit-content;
+    margin: auto;
+}
+.grid__boton{
+   
+   border-radius: 1rem;
+   cursor: pointer;
+   border: none;
+   width: 8rem;
+   height: 8rem;
+   
+   
+
+}
+.grid__boton:hover{
+    background-color: antiquewhite;
+}
+.boton-reiniciar {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    background-color: #eee;
+    border: 2px solid #aaa;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .boton-reiniciar:hover {
+    background-color: #ddd;
+  }
+  

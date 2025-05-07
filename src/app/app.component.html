@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>BUSCAMINAS</h1>
+</div>
+<div class="container">
+  <button (click)="reiniciarJuego()" class="boton-reiniciar"> Reiniciar</button>
+</div>
+
+<div class="grid">
+  @for (item of items; track $index;let idx = $index) {
+    @for (item of items; track $index;let idx1 = $index) {
+      <button (click)="clickbutton(idx,idx1)" [disabled]="buttonsDisabled[idx][idx1]" class="grid__boton">{{ buttonsDisabled[idx][idx1] ? matrizConMinas[idx][idx1] ? '💣' : matrizContador[idx][idx1] : '' }}
+      </button>
+    }
+  }
+  
+  
+</div>
